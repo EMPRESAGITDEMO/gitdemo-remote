@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="box">
+      <img src="../static/images/deloitte.png">
+      <form action="sum" method="post">
+        <br>
+        <br>
+        Ingresa tu peso en kilogramos [kg]
+        <br>
+        <input type="number" name="n1_input">
+        <br>
+        Ingresa tu estatura en centímetros [cm]
+        <br>
+        <input type="number" name="n2_input">
+        <br>
+        <input type="submit" value="Calcular IMC" id="sum">
+      </form>
+      
+      <img src="../static/images/sura.png">
+      <br>
+      Demo GitFlow  
+    </div>
+</body>
+</html>
