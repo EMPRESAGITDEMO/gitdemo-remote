@@ -32,6 +32,19 @@ def agecalc():
 	flash("Tu edad es: " + str(age) + " años")
 	return render_template("ageindex2.html")
 
+#Cálculo de índice de masa corporal
+@app.route("/imc")
+def sum():
+	return render_template("imcindex.html")
+
+@app.route("/sum", methods=['POST','GET'])
+def sumcalc():
+	peso = request.form['n1_input']
+	estatura = request.form['n2_input']
+	imc = round((float(peso)) / (((float(estatura))/100)**2),2)
+	flash("Tu Índice de Masa Corporal (IMC) es: " + str(imc))
+	return render_template("imcindex2.html")
+
 HOST = "localhost"
 PORT = 4000
 DEBUG = True
