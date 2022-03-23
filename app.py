@@ -28,7 +28,7 @@ def agecalc():
 	bd = request.form['date_input']
 	birthday = datetime.strptime(bd, '%Y-%m-%d')
 	age = today.year - birthday.year
-	#age -= ((today.month, today.day) < (birthday.month, birthday.day))
+	age -= ((today.month, today.day) < (birthday.month, birthday.day))
 	flash("Tu edad es: " + str(age) + " años")
 	return render_template("ageindex2.html")
 
